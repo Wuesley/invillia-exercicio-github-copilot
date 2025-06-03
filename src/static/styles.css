@@ -142,3 +142,122 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participants-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.participant-chip {
+  display: inline-block;
+  background-color: #e3eafc;
+  color: #1a237e;
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 14px;
+  border: 1px solid #90caf9;
+  margin-bottom: 2px;
+  white-space: nowrap;
+}
+
+.participants-list-vertical {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.participant-box {
+  background: #e3eafc;
+  color: #1a237e;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 15px;
+  border: 1px solid #90caf9;
+  box-shadow: 0 1px 3px rgba(26, 35, 126, 0.07);
+  margin: 0;
+  width: fit-content;
+  max-width: 100%;
+  word-break: break-all;
+}
+
+.participants-highlight-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.participant-highlight {
+  background: #fff59d;
+  color: #333;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  border: 1px solid #ffe082;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.participants-highlight-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.participant-highlight-full {
+  border-radius: 4px;
+  padding: 7px 12px;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  word-break: break-all;
+  border-left: 5px solid;
+  border-right: 1px solid;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* Marca-texto: amarelo */
+.highlight-yellow {
+  background: linear-gradient(90deg, #fff59d 80%, #fffde7 100%);
+  color: #222;
+  border-color: #ffe082;
+}
+
+/* Marca-texto: verde */
+.highlight-green {
+  background: linear-gradient(90deg, #b9f6ca 80%, #e0f2f1 100%);
+  color: #1b5e20;
+  border-color: #69f0ae;
+}
+
+/* Marca-texto: azul */
+.highlight-blue {
+  background: linear-gradient(90deg, #81d4fa 80%, #e1f5fe 100%);
+  color: #01579b;
+  border-color: #4fc3f7;
+}
+
+/* Marca-texto: rosa */
+.highlight-pink {
+  background: linear-gradient(90deg, #f8bbd0 80%, #fce4ec 100%);
+  color: #ad1457;
+  border-color: #f06292;
+}
+
+/* Marca-texto: laranja */
+.highlight-orange {
+  background: linear-gradient(90deg, #ffd180 80%, #fff3e0 100%);
+  color: #e65100;
+  border-color: #ffb74d;
+}

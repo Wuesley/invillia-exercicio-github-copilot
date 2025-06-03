@@ -16,6 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
       // Limpar opções antigas do select, mantendo o placeholder
       activitySelect.innerHTML = '<option value="">-- Select an activity --</option>';
 
+      // Cores de marca-texto para alternar
+      const highlightColors = [
+        "highlight-yellow",
+        "highlight-green",
+        "highlight-blue",
+        "highlight-pink",
+        "highlight-orange"
+      ];
+
       // Populate activities list
       Object.entries(activities).forEach(([name, details]) => {
         const activityCard = document.createElement("div");
@@ -23,14 +32,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
-        // Lista de participantes
+        // Lista de participantes: um abaixo do outro, cada um com uma cor diferente
         let participantsHtml = "";
         if (details.participants && details.participants.length > 0) {
           participantsHtml = `
             <p><strong>Inscritos:</strong></p>
-            <ul>
-              ${details.participants.map(email => `<li>${email}</li>`).join("")}
-            </ul>
+            <div class="participants-highlight-vertical">
+              ${details.participants.map((email, idx) =>
+                `<div class="participant-highlight-full ${highlightColors[idx % highlightColors.length]}">${email}</div>`
+              ).join("")}
+            </div>
           `;
         } else {
           participantsHtml = `<p><em>Nenhum participante inscrito ainda.</em></p>`;
